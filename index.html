@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="If we’re going to win this election, we
+    need you on board. Help our campaign today!"" />
+    <meta property="og:title" content="Edgar Juarez for School Board, Place 1>
+    <meta property="og:description" content="If we’re going to win this election, we
+    need you on board. Help our campaign today!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://edgarjuarez.vote/">
+    <meta property="og:image" content="https://edgarjuarez.vote/assets/banner.jpg"/>
+    <title>Vote Edgar Juarez for School Board, Place 1</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="icon" href="./assets/favicon.ico" />
+  </head>
+  <body>
+    <main>
+      <div id="intro-section">
+        <p>
+          Join me in championing strong leadership and community-driven
+          progress! Together, we can create the change our students and
+          community deserve.
+        </p>
+        <p>
+          Your contribution will help build the change you want to see in EPISD!
+        </p>
+
+        <button id="donation-button">DONATE</button>
+      </div>
+    </main>
+
+    <div>
+      <img
+        src="assets/banner.jpg"
+        width="900px"
+        alt="Edgar Juarez for School Board, Place 1"
+      />
+    </div>
+
+    <dialog id="donation-modal">
+      <h1>Choose your preferred payment method:</h1>
+      <a
+        href="https://www.paypal.com/paypalme/edgarjuarez74?locale.x=en_US"
+        aria-label="Edgar Juarez Paypal"
+        ><i class="fa-brands fa-paypal"></i> PayPal</a
+      >
+      <a
+        href="https://cash.app/$edgarhugojuarez/"
+        aria-label="Edgar Juarez Cash App"
+        ><i class="fa-solid fa-dollar-sign"></i> Cash App</a
+      >
+      <a href="" aria-label="Edgar Juarez Zelle"
+        ><i class="fa-solid fa-z"></i> Zelle</a
+      >
+    </dialog>
+  </body>
+
+  <script
+    src="https://kit.fontawesome.com/0434762a36.js"
+    crossorigin="anonymous"
+  ></script>
+
+  <script>
+    let donationButton = document.getElementById('donation-button');
+    let donationModal = document.getElementById('donation-modal');
+    donationButton.onclick = () => {
+      donationModal.showModal();
+    };
+
+    donationModal.onclick = (e) => {
+      if (e.target == donationModal) donationModal.close();
+    };
+  </script>
+</html>
