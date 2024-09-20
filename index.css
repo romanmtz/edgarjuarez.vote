@@ -1,3 +1,7 @@
+* {
+  overflow: hidden;
+}
+
 html {
   background-image: url(assets/portrait.png),
     linear-gradient(to left, #637ec3, #313992);
@@ -45,20 +49,28 @@ p {
 }
 
 #donation-modal {
+  font-family: Arial, Helvetica, sans-serif;
+
   align-items: center;
   justify-content: center;
   text-align: center;
   font-size: 1.9rem;
-  width: 300px;
+  max-width: 300px;
+  min-width: 300px;
   height: fit-content;
   border-radius: 5px;
   border: none;
-  box-shadow: 10px 10px 6px rgba(0, 0, 0, 0.525);
 }
 
 #donation-modal a {
   margin: 20px;
+  padding-bottom: 20px;
 }
+
+#donation-modal i {
+  transform: translate(0px , 4px);
+}
+
 
 #donation-modal h1 {
   font-family: Arial, Helvetica, sans-serif;
@@ -91,6 +103,7 @@ a {
   -webkit-user-select: none;
   touch-action: manipulation;
   text-decoration: none;
+
 }
 
 button:hover,
@@ -107,10 +120,8 @@ button:active {
 }
 
 @media only screen and (hover: none) and (pointer: coarse) {
-  *{
-    overflow: hidden;
-  }
-  
+
+
   html {
     background-position: bottom;
     background-image: url(assets/portrait.png),
@@ -142,5 +153,21 @@ button:active {
   #donation-modal {
     flex-flow: column;
     width: 70vw;
+  }
+}
+
+@media only screen and (hover: none) and (pointer: coarse) and (orientation: landscape) {
+  #intro-section {
+    background-color: transparent;
+    padding: 0;
+  }
+    
+  #intro-section button {
+    border-color: black;
+    border-width: 4px;
+  }
+
+  #intro-section p {
+    display: none;
   }
 }
